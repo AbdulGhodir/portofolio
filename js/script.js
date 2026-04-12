@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const typingTextElement = document.getElementById('typing-text');
-    const kata =  ["Backend Learner", "Python Enthusiast", "Mobile Developer (Aamiin)"];
+    const kata = ["Backend Learner", "Python Enthusiast", "Mobile Developer (Aamiin)"];
     let indexKata = 0;
     let indexKarakter = 0;
     let isDeleting = false;
@@ -38,6 +38,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navMobileBtn.addEventListener('click', () => {
         navMobileMenu.classList.toggle('hidden');
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(reveal => {
+        reveal.classList.add('active');
+    });
+
+    const revealsRight = document.querySelectorAll('.reveal-right');
+
+    revealsRight.forEach(reveal => {
+        reveal.classList.add('active');
+    });
+
+
+    const revealScroll = document.querySelectorAll('.reveal-scroll');
+    const revealScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, {
+        threshold: 0
+    });
+
+    revealScroll.forEach(reveal => {
+        revealScrollObserver.observe(reveal);
+    });
+
+    revealsRight.forEach(reveal => {
+        revealScrollObserver.observe(reveal);
     });
 
 });

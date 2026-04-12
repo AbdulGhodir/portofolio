@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#02040a',
+                        navy: '#0f172a',
+                        navyLight: '#1e293b',
+                        primary: '#3b82f6',
+                        secondary: '#0ea5e9',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .nav-active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .nav-active:hover {
+            color: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-white flex-col min-h-screen overflow-hidden">
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-[size:35px_35px] bg-[linear-gradient(to_right,rgba(30,41,59,0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgba(30,41,59,0.3)_1px,transparent_1px)]"></div>
+        <div class="absolute left-[-10%] top-[-10%] bg-blue-900/30 w-[500px] h-[500px] rounded-full blur-[120px] mix-blend-screen"></div>
+        <div class="absolute right-[-10%] bottom-[-10%] bg-indigo-900/30 w-[500px] h-[500px] rounded-full blur-[120px] mix-blend-screen"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="fixed right-0 left-0 z-50">
+        <nav class="flex justify-between items-center bg-darkBg px-4 md:px-16 py-4 border-b-2 border-b-navyLight">
+            <a href="index.html" class="group flex items-center justify-center space-x-2 hover:scale-[1.03] duration-100">
+                <div class="rounded-lg bg-navy border border-primary/40 w-fit py-[7px] px-[4px] group-hover:shadow-[0_0_10px_#0ea5e9] transition-all">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary text-sm font-black rounded-[10px]">AGF</span>
+                </div>
+                
+                <div class="flex flex-col justify-center items-center leading-4">
+                    <span class="font-extrabold text-[1.25rem] group-hover:text-primary transition-all duration-300">Abdul</span>
+                    <span class="text-[0.8rem] font-bold text-gray-400 tracking-[0.2rem] italic group-hover:line-through transition-all duration-1000">Skizoo</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex gap-6 items-center mr-5">
+                <a href="index.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Home</a>
+                <a href="about.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">About</a>
+                <a href="skills.html" class="nav-active hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Skills</a>
+                <a href="project.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Project</a>
+                <a href="contact.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Contact</a>
+            </div>
+
+            <!-- Mobile Nav -->
+            <button class="mr-1 md:hidden text-gray-300 hover:text-white focus:outline-none" id="nav-mobile-btn">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+        <div id="nav-mobile" class="md:hidden hidden p-3 border-b-2 border-b-navyLight bg-navy">
+            <div class="flex flex-col gap-3">
+                <a href="index.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Home</a>
+                <a href="about.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">About</a>
+                <a href="skills.html" class="nav-active hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Skills</a>
+                <a href="project.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Project</a>
+                <a href="contact.html" class="text-gray-400 text-sm hover:text-white hover:scale-[1.03] hover:-translate-y-[1px] transition-all duration-150">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="relative lg:flex-row flex flex-col z-25 pt-32 pb-10 lg:pb-8 lg:pt-20 min-h-screen w-full px-5 gap-5">
+        <!-- Tentang Saya -->
+        <div>
+            <h1 class="text-4xl font-bold">My Skills</h1>
+        </div>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
