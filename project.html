@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,9 +35,42 @@
         .nav-active:hover {
             color: #0ea5e9;
         }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.7s ease-out;
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease-out;
+        }
+
+        .reveal-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
-<body class="bg-darkBg text-white flex-col min-h-screen overflow-hidden">
+<body class="bg-darkBg text-white flex-col min-h-screen">
     <div class="fixed inset-0 z-0 pointer-events-none">
         <div class="absolute inset-0 bg-[size:35px_35px] bg-[linear-gradient(to_right,rgba(30,41,59,0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgba(30,41,59,0.3)_1px,transparent_1px)]"></div>
         <div class="absolute left-[-10%] top-[-10%] bg-blue-900/30 w-[500px] h-[500px] rounded-full blur-[120px] mix-blend-screen"></div>
@@ -83,12 +116,135 @@
         </div>
     </header>
 
-    <!-- About -->
-    <section class="relative lg:flex-row flex flex-col z-25 pt-32 pb-10 lg:pb-8 lg:pt-20 min-h-screen w-full px-5 gap-5">
-        <!-- Tentang Saya -->
-        <div>
-            <h1 class="text-4xl font-bold">My Project</h1>
-        </div>
+    <!-- Isi Project -->
+    <section class="relative flex flex-col z-25 pt-28 pb-10 lg:pb-8 min-h-screen w-full px-5 lg:px-32 gap-5">
+        <!-- Project -->
+            <div class="reveal-scroll lg:reveal delay-[150ms] flex flex-col gap-1">
+                <span class="text-3xl font-bold ">My Project</span>
+                <div class="w-20 h-0.5 bg-primary"></div>
+            </div>
+
+            <div class="flex flex-col gap-10">
+                <div class="flex gap-6 justify-between">
+                    <a href="https://github.com/AbdulGhodir/final-project-pbo" target="_blank" class="reveal-scroll lg:reveal delay-[250ms] flex flex-col w-full lg:w-1/3">
+                        <div class="flex flex-col w-full h-full hover:-translate-y-1 transition-all duration-200 hover:shadow-[0_0_5px_#3b82f6] p-4 gap-2 bg-navy/80 border-2 border-navyLight rounded-xl">
+                            <img src="images/project-pbo.png" alt="Project 1" class="h-44 rounded-xl">
+                            
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xl font-bold ">Sistem Boocamp</span>
+                                    <span class="text-sm text-gray-400">Project Pemrograman Berorientasi Objek</span>
+                                </div>
+                                <p class="text-gray-500 text-xs">Aplikasi manajemen platform kursus bootcamp yang dikembangkan menggunakan pendekatan Pemrograman Berbasis Objek (OOP). Sistem ini memfasilitasi pengelolaan data peserta dan pendaftaran kelas</p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mt-auto pt-6">
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-java text-orange-500 text-sm"></i> Java</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-database text-blue-400 text-sm"></i> MySQL</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/AbdulGhodir/sistem-krs" target="_blank" class="reveal-scroll lg:reveal delay-[350ms] flex flex-col w-full lg:w-1/3">
+                        <div class="flex flex-col w-full h-full hover:-translate-y-1 transition-all duration-200 hover:shadow-[0_0_5px_#3b82f6] p-4 gap-2 bg-navy/80 border-2 border-navyLight rounded-xl">
+                            <img src="images/project-pdt.png" alt="Project 2" class="h-44 object-cover rounded-xl">
+                            
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xl font-bold ">Sistem KRS</span>
+                                    <span class="text-sm text-gray-400">Project Pemrosesan Data Terdistribusi</span>
+                                </div>
+                                <p class="text-gray-500 text-xs">Sistem manajemen KRS berbasis digital yang mengimplementasikan operasi CRUD kompleks dan relasi database. Proyek ini dirancang untuk menangani alur pendaftaran mata kuliah secara dinamis beserta kalkulasi dan validasi beban SKS mahasiswa</p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mt-auto pt-6">
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-php text-indigo-400 text-sm"></i> PHP</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-database text-blue-400 text-sm"></i> MySQL</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/AbdulGhodir/PrakTAM_2417051054" target="_blank" class="reveal-scroll lg:reveal delay-[450ms] flex flex-col w-full lg:w-1/3">
+                        <div class="flex flex-col w-full h-full hover:-translate-y-1 transition-all duration-200 hover:shadow-[0_0_5px_#3b82f6] p-4 gap-2 bg-navy/80 border-2 border-navyLight rounded-xl">
+                            <img src="images/project-tam.png" alt="Project 3" class="h-44 object-contain rounded-xl">
+
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xl font-bold ">Aplikasi Kasir</span>
+                                    <span class="text-sm text-gray-400">Project Aplikasi Mobile</span>
+                                </div>
+                                <p class="text-gray-500 text-xs">Proyek pengembangan aplikasi mobile berbasis Android. Aplikasi Kasir Sederhana untuk memudahkan transaksi pada toko atau UMKM. Proyek ini dibuat menggunakan Android Studio dengan bahasa pemrograman Kotlin.</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mt-auto pt-6">
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-android text-green-500 text-sm"></i> Android Studio</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-android text-[#3DDC84] text-sm"></i> Kotlin</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="flex gap-6 justify-between">
+                    <a href="https://github.com/AbdulGhodir/uas-sda-bracket" target="_blank" class="reveal-scroll lg:reveal delay-[550ms] flex flex-col w-full lg:w-1/3">
+                        <div class="flex flex-col w-full h-full hover:-translate-y-1 transition-all duration-200 hover:shadow-[0_0_5px_#3b82f6] p-4 gap-2 bg-navy/80 border-2 border-navyLight rounded-xl">
+                            <img src="images/project-sda.png" alt="Project 4" class="h-44 rounded-xl">
+
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xl font-bold ">Bracket Karate</span>
+                                    <span class="text-sm text-gray-400">Project Struktur Data dan Algoritma</span>
+                                </div>
+                                <p class="text-gray-500 text-xs">Aplikasi manajemen bagan turnamen (bracket) Karate yang dikembangkan sebagai implementasi mata kuliah Struktur Data dan Algoritma. Sistem ini mengaplikasikan struktur data kompleks untuk mengatur skema pertandingan dari babak penyisihan hingga final secara otomatis dan efisien</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mt-auto pt-6">
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-python text-blue-500 text-sm"></i> Python</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-code text-green-400 text-sm"></i> Flask</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-html5 text-orange-500 text-sm"></i> HTML</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-brands fa-css3-alt text-blue-500 text-sm"></i> CSS</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/AbdulGhodir/project-uap-petruk" target="_blank" class="reveal-scroll lg:reveal delay-[650ms] flex flex-col w-full lg:w-1/3">
+                        <div class="flex flex-col w-full h-full hover:-translate-y-1 transition-all duration-200 hover:shadow-[0_0_5px_#3b82f6] p-4 gap-2 bg-navy/80 border-2 border-navyLight rounded-xl">
+                            <img src="images/project-petruk.png" alt="Project 5" class="h-44 object-cover rounded-xl">
+
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xl font-bold ">Sistem Pegadaian</span>
+                                    <span class="text-sm text-gray-400">Project Pemrograman Terstruktur</span>
+                                </div>
+                                <p class="text-gray-500 text-xs">Aplikasi berbasis Command Line Interface (CLI) untuk manajemen transaksi sistem pegadaian. Proyek ini dikembangkan sebagai implementasi Ujian Akhir Praktikum untuk mensimulasikan pencatatan barang gadai, taksiran harga, dan perhitungan bunga.</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mt-auto pt-6">
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-code text-blue-500 text-sm"></i> C++</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-terminal text-gray-400 text-sm"></i> CLI</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/AbdulGhodir/KoBiKo" target="_blank" class="reveal-scroll lg:reveal delay-[750ms] flex flex-col w-full lg:w-1/3">
+                        <div class="flex flex-col w-full h-full hover:-translate-y-1 transition-all duration-200 hover:shadow-[0_0_5px_#3b82f6] p-4 gap-2 bg-navy/80 border-2 border-navyLight rounded-xl">
+                            <img src="images/project-kobiko.png" alt="Project 6" class="h-44 object-contain rounded-xl">
+
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-col">
+                                    <span class="text-xl font-bold ">KoBiKo</span>
+                                    <span class="text-sm text-gray-400">Dasar Pemrograman</span>
+                                </div>
+                                <p class="text-gray-500 text-xs">Aplikasi berbasis Command Line Interface (CLI) untuk konversi bilangan biner, oktal, desimal, dan heksadesimal. Proyek ini dikembangkan sebagai implementasi Dasar Pemrograman menggunakan bahasa pemrograman C++.</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mt-auto pt-6">
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-code text-blue-500 text-sm"></i> C++</span>
+                                <span class="px-3 py-1.5 bg-darkBg border border-navyLight/70 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 hover:border-primary/50 transition-colors"><i class="fa-solid fa-terminal text-gray-400 text-sm"></i> CLI</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
     </section>
     
     <script src="js/script.js"></script>
