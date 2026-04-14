@@ -116,9 +116,8 @@
         </div>
     </header>
 
-    <!-- About -->
+    <!-- Isi Konten -->
     <section class="relative flex flex-col z-25 pt-28 pb-10 lg:pb-8 min-h-screen w-full px-5 lg:px-32 gap-5">
-        <!-- Tentang Saya -->
         <div class="reveal delay-[150ms] flex flex-col gap-1">
             <span class="text-3xl font-bold ">Contact Me</span>
             <div class="w-20 h-0.5 bg-primary"></div>
@@ -126,6 +125,7 @@
 
         <p class="reveal delay-[250ms] text-gray-400 text-sm">Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya melalui form di bawah ini.</p>
 
+        <!-- Kontak Langsung -->
         <div class="reveal-scroll lg:reveal delay-[350ms] flex flex-col gap-5 bg-navy/80 p-10 rounded-xl">
             <form action="" method="POST" class="flex flex-col gap-6">
                 <div class="flex gap-8">
@@ -135,7 +135,7 @@
                             <div class="absolute inset-y-0 left-3 flex justify-center items-center">
                                 <i class="fa-regular fa-user text-gray-500"></i>
                             </div>
-                            <input type="text" id="name" name="name" placeholder="Masukkan Nama" required class="w-full bg-darkBg/70 p-3 pl-10 rounded-lg placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+                            <input type="text" id="name" name="name" placeholder="Masukkan Nama" required class="w-full bg-darkBg/70 p-3 pl-10 rounded-lg placeholder:text-xs lg:placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                         </div>
                     </div>
                     
@@ -145,7 +145,7 @@
                             <div class="absolute inset-y-0 left-3 flex justify-center items-center">
                                 <i class="fa-regular fa-envelope text-gray-500"></i>
                             </div>
-                            <input type="email" id="email" name="email" placeholder="Masukkan Email" required class="w-full bg-darkBg/70 p-3 pl-10 rounded-lg placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+                            <input type="email" id="email" name="email" placeholder="Masukkan Email" required class="w-full bg-darkBg/70 p-3 pl-10 rounded-lg placeholder:text-xs lg:placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                         </div>
                     </div>
                 </div>
@@ -156,14 +156,14 @@
                         <div class="absolute inset-y-0 left-3 flex justify-center items-center">
                             <i class="fa-solid fa-pen text-gray-500 text-sm"></i>
                         </div>
-                        <input type="text" id="subject" name="subject" placeholder="Masukkan Subjek Pesan (Kerja Sama, Lowongan, dll)" required class="w-full bg-darkBg/70 p-3 pl-10 rounded-lg placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+                        <input type="text" id="subject" name="subject" placeholder="Masukkan Subjek Pesan (Kerja Sama, Lowongan, dll)" required class="w-full bg-darkBg/70 p-3 pl-10 rounded-lg placeholder:text-xs lg:placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                     </div>
                 </div>
 
 
                 <div class="w-full flex flex-col gap-2">
                     <label for="message" class="text-xs font-semibold">Isi Pesan</label>
-                    <textarea id="message" name="message" placeholder="Tulis Pesan Anda..." required class="w-full bg-darkBg/70 p-3 rounded-lg placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary resize-none"></textarea>
+                    <textarea id="message" name="message" placeholder="Tulis Pesan Anda..." required class="w-full bg-darkBg/70 p-3 rounded-lg placeholder:text-xs lg:placeholder:text-sm placeholder:text-gray-600 outline-none focus:border-primary focus:ring-1 focus:ring-primary resize-none"></textarea>
                 </div>
 
                 <button type="submit" class="mt-4 bg-primary hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 group">
@@ -174,11 +174,12 @@
 
         <div class="reveal-scroll w-full flex items-center justify-center py-10">
             <div class="h-[1px] w-1/3 md:w-1/4 bg-gradient-to-r from-transparent to-navyLight"></div>
-            <span class="mx-4 text-gray-500 text-sm font-medium tracking-widest uppercase">Atau Temukan Saya Di</span>
+            <span class="mx-4 text-gray-500 w-1/3 text-center text-sm font-medium tracking-widest uppercase">Atau Temukan Saya Di</span>
             <div class="h-[1px] w-1/3 md:w-1/4 bg-gradient-to-l from-transparent to-navyLight"></div>
         </div>
 
-        <div class="reveal-scroll flex w-full justify-between gap-10">
+        <!-- Media Social -->
+        <div class="hidden md:flex reveal-scroll w-full justify-between gap-10">
             <a href="https://github.com/AbdulGhodir" target="_blank" class="w-1/5 group bg-navy/50 border border-navyLight p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-navy hover:border-gray-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(255,255,255,0.05)]">
                 <i class="fa-brands fa-github text-4xl text-gray-400 group-hover:text-white transition-colors"></i>
                 <span class="text-gray-400 font-medium group-hover:text-white transition-colors">GitHub</span>
@@ -203,7 +204,28 @@
                 <i class="fa-solid fa-envelope text-4xl text-gray-400 group-hover:text-primary transition-colors"></i>
                 <span class="text-gray-400 font-medium group-hover:text-white transition-colors">Email</span>
             </a>
+        </div>
 
+        <div class="reveal-scroll flex w-full justify-between gap-2">
+            <a href="https://github.com/AbdulGhodir" target="_blank" class="w-14 h-14 group bg-navy/50 border border-navyLight rounded-full flex flex-col items-center justify-center hover:bg-navy hover:border-gray-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(255,255,255,0.05)]">
+                <i class="fa-brands fa-github text-2xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/abdul-ghodir-firdiansyah-081916402" target="_blank" class="w-14 h-14 group bg-navy/50 border border-navyLight rounded-full flex flex-col items-center justify-center hover:bg-navy hover:border-[#0A66C2] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(10,102,194,0.2)]">
+                <i class="fa-brands fa-linkedin text-2xl text-gray-400 group-hover:text-[#0A66C2] transition-colors"></i>
+            </a>
+
+            <a href="https://www.instagram.com/abdul_ghodir" target="_blank" class="w-14 h-14 group bg-navy/50 border border-navyLight rounded-full flex flex-col items-center justify-center hover:bg-navy hover:border-pink-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(236,72,153,0.2)]">
+                <i class="fa-brands fa-instagram text-2xl text-gray-400 group-hover:text-pink-500 transition-colors"></i>
+            </a>
+            
+            <a href="https://wa.me/6281541540271" target="_blank" class="w-14 h-14 group bg-navy/50 border border-navyLight rounded-full flex flex-col items-center justify-center hover:bg-navy hover:border-green-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(236,72,153,0.2)]">
+                <i class="fa-brands fa-whatsapp text-2xl text-gray-400 group-hover:text-green-500 transition-colors"></i>
+            </a>
+
+            <a href="mailto:abdulghodir08@gmail.com" class="w-14 h-14 group bg-navy/50 border border-navyLight rounded-full flex flex-col items-center justify-center hover:bg-navy hover:border-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.2)]">
+                <i class="fa-solid fa-envelope text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+            </a>
         </div>
 
 
